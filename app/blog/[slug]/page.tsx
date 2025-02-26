@@ -17,16 +17,18 @@ const getPostContent = (slug: string) => {
   return matterResult;
 };
 
+// This will pre-generate static paths during build
 export const generateStaticParams = async () => {
-  const posts = getPostMeta();
-  return posts.map((post) => {
-    return { slug: post.slug };
-  });
+  const posts = getPostMeta(); // Fetch all post metadata (e.g., slug)
+
+  // Generate an array of objects for dynamic routes
+  return posts.map((post) => ({
+    slug: post.slug, // Dynamic parameter for the path
+  }));
 };
 
-const postPage = async (props: any) => {
-  const params = await props.params;
-  const slug = params.slug;
+const postPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   const post = getPostContent(slug);
 
   // TODO: styling for this shit

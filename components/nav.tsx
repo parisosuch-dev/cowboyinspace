@@ -15,8 +15,6 @@ export default function Nav() {
 
   const pathName = usePathname();
 
-  console.log(pathName);
-
   const routes: Route[] = [
     { path: "/", title: "Home" },
     { path: "/blog", title: "Blog" },

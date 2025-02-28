@@ -32,9 +32,6 @@ export default function Home() {
     (a, b) => parseInt(b) - parseInt(a)
   );
 
-  console.log(years);
-  console.log(groupedPosts);
-
   return (
     <div className="flex w-full flex-col justify-center items-center">
       <div className="w-5/6 sm:w-1/3">

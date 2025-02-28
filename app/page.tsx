@@ -1,7 +1,6 @@
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { getLatestPosts } from "@/lib/post-meta";
-import { a } from "motion/react-client";
 import Link from "next/link";
 
 export default function Home() {
@@ -19,9 +18,9 @@ export default function Home() {
     [year: string]: Post[];
   }
 
-  let groupedPosts: GroupedPosts = {};
+  const groupedPosts: GroupedPosts = {};
 
-  for (let post of posts) {
+  for (const post of posts) {
     const year = post.date.getFullYear();
     if (!groupedPosts[year]) {
       groupedPosts[year] = [];

@@ -31,7 +31,7 @@ export default function Nav() {
   const activeStyling = styling + " underline";
 
   return (
-    <div className="p-2 sm:p-0 sm:py-4 sm:px-16 w-full flex flex-col space-y-1 sm:space-y-0 sm:flex-row justify-between">
+    <div className="p-2 sm:p-0 sm:py-4 sm:px-16 w-full flex flex-col space-y-1 sm:space-y-0 sm:flex-row justify-between text-center sm:text-left">
       <div className="space-x-8">
         {routes.map((route) => (
           <Link

@@ -45,7 +45,7 @@ const postPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <p>{post.data.topic.toUpperCase()}</p>
           <p>{post.data.date}</p>
         </div>
-        <article className="prose text-xs sm:text-base">
+        <article className="prose dark:prose-invert text-xs sm:text-base">
           <Markdown>{post.content}</Markdown>
         </article>
       </div>

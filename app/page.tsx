@@ -25,7 +25,7 @@ export default function Home() {
           <Link
             key={post.title}
             href={`/blog/${post.slug}`}
-            className="flex flex-col sm:flex-row w-full justify-between font-mono border-b group mt-2"
+            className="flex flex-col sm:flex-row w-full justify-between font-mono group mt-2"
           >
             <p className="text-base md:text-2xl group-hover:text-black/50">
               {post.title}
@@ -40,6 +40,11 @@ export default function Home() {
               </p>
             </div>
           </Link>
+          <div className="mt-2">
+            <Link href="/blog" className="underline">
+              More posts &rarr;
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -33,20 +33,22 @@ const postPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   // TODO: styling for this shit
   return (
-    <div className="p-4 sm:p-8 space-y-4 sm:space-y-8 sm:w-1/2 2xl:w-1/4 font-mono">
-      <Link
-        className="text-xs sm:text-sm hover:underline hover:cursor-pointer"
-        href="/"
-      >
-        {"←"} back
-      </Link>
-      <div className="flex flex-row space-x-4 sm:space-x-8">
-        <p>{post.data.topic.toUpperCase()}</p>
-        <p>{post.data.date}</p>
+    <div className="w-full flex flex-col items-center">
+      <div className="p-4 sm:p-8 space-y-4 sm:space-y-8 sm:w-1/3 font-mono">
+        <Link
+          className="text-xs sm:text-sm hover:underline hover:cursor-pointer"
+          href="/"
+        >
+          {"←"} back
+        </Link>
+        <div className="flex flex-row space-x-4 sm:space-x-8">
+          <p>{post.data.topic.toUpperCase()}</p>
+          <p>{post.data.date}</p>
+        </div>
+        <article className="prose text-xs sm:text-base">
+          <Markdown>{post.content}</Markdown>
+        </article>
       </div>
-      <article className="prose text-xs sm:text-base">
-        <Markdown>{post.content}</Markdown>
-      </article>
     </div>
   );
 };

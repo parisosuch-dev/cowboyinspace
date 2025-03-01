@@ -56,7 +56,7 @@ export const getLatestPosts = (n: number) => {
 export const getPosts = () => {
   const postMeta = getPostMeta();
 
-  let posts = postMeta.map((post) => {
+  const posts = postMeta.map((post) => {
     return {
       title: post.title,
       subtitle: post.subtitle,

@@ -52,3 +52,23 @@ export const getLatestPosts = (n: number) => {
 
   return posts;
 };
+
+export const getPosts = () => {
+  const postMeta = getPostMeta();
+
+  let posts = postMeta.map((post) => {
+    return {
+      title: post.title,
+      subtitle: post.subtitle,
+      slug: post.slug,
+      topic: post.topic,
+      date: new Date(post.date.replace(".", "-")),
+    };
+  });
+  // order posts from latest to oldest and cut off by n
+  posts.sort((a, b) => {
+    return +b.date - +a.date;
+  });
+
+  return posts;
+};

@@ -34,7 +34,7 @@ const postPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   // TODO: styling for this shit
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="space-y-2 sm:space-y-4 sm:w-1/3 font-mono">
+      <div className="space-y-2 sm:space-y-4 w-5/6 sm:w-1/3 font-mono">
         <Link
           className="text-xs sm:text-sm hover:underline hover:cursor-pointer"
           href="/"

@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import { getPosts } from "@/lib/post-meta";
 import Link from "next/link";
 
@@ -32,8 +33,11 @@ export default function Page() {
   return (
     <div className="w-full flex flex-col items-center">
       <div className="flex flex-col w-5/6 sm:w-1/3">
-        <h1 className="font-mono text-lg md:text-3xl">Blog</h1>
-        <div className="mt-2 space-y-8">
+        <Header
+          title="Blog"
+          subtext="Place to dump my thoughts and learnings."
+        />
+        <div className="mt-2 sm:mt-8 space-y-8">
           {years.map((year) => (
             <div key={year} className="space-y-4">
               <h2 className="text-base md:text-xl font-mono">{year}</h2>

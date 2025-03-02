@@ -14,10 +14,7 @@ export default function Header({
         {title}
       </h1>
       {subtext ? (
-        <p className="text-white text-xs sm:text-sm mt-1 sm:mt-2">
-          My spot in cyberspace to share my interests - mostly in the realm of
-          software, space, and politics.
-        </p>
+        <p className="text-white text-xs sm:text-sm mt-1 sm:mt-2">{subtext}</p>
       ) : null}
       <ShootingStars />
       <StarsBackground />

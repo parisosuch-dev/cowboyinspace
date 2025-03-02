@@ -1,6 +1,4 @@
 import Header from "@/components/header";
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
 import { getLatestPosts } from "@/lib/post-meta";
 import Link from "next/link";
 

@@ -37,7 +37,7 @@ export default function Page() {
           title="Blog"
           subtext="Place to dump my thoughts and learnings."
         />
-        <div className="mt-2 space-y-8">
+        <div className="mt-2 sm:mt-8 space-y-8">
           {years.map((year) => (
             <div key={year} className="space-y-4">
               <h2 className="text-base md:text-xl font-mono">{year}</h2>

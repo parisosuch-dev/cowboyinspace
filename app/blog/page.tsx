@@ -32,7 +32,7 @@ export default function Page() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="flex flex-col w-5/6 sm:w-1/3">
+      <div className="flex flex-col w-5/6 sm:w-3/6 2xl:w-1/3">
         <Header
           title="Blog"
           subtext="Place to dump my thoughts and learnings."

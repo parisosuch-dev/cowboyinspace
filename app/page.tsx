@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="flex w-full flex-col justify-center items-center">
-      <div className="w-5/6 sm:w-1/3">
+      <div className="w-5/6 sm:w-3/6 2xl:w-1/3">
         <Header
           title="Paris Osuch"
           subtext="My spot in cyberspace to share my interests - mostly in the realm of

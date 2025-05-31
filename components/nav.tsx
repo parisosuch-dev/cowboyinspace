@@ -24,7 +24,6 @@ export default function Nav() {
   const socials: Social[] = [
     { url: "https://github.com/parisosuch-dev", title: "Github" },
     { url: "https://linkedin.com/in/parisosuch", title: "LinkedIn" },
-    { url: "https://parisosuch.com", title: "Resume" },
   ];
 
   const styling = "font-mono text-xs sm:text-base tracking-wider";

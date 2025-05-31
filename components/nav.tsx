@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
 export default function Nav() {
   interface Route {
@@ -14,6 +17,9 @@ export default function Nav() {
   }
 
   const pathName = usePathname();
+
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const routes: Route[] = [
     { path: "/", title: "Home" },
@@ -29,8 +35,24 @@ export default function Nav() {
   const styling = "font-mono text-xs sm:text-base tracking-wider";
   const activeStyling = styling + " underline";
 
+  const themeButtonStyling = "hover:cursor-pointer";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleThemeSwitch = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  };
+
+  if (!mounted) return null;
+
   return (
-    <div className="p-2 sm:p-0 sm:py-4 sm:px-16 w-full flex flex-col space-y-1 sm:space-y-0 sm:flex-row justify-between text-center sm:text-left">
+    <div className="p-2 sm:p-0 sm:py-4 sm:px-16 w-full flex flex-col space-y-1 sm:space-y-0 sm:flex-row justify-between text-center sm:text-left dark:text-white">
       <div className="space-x-8">
         {routes.map((route) => (
           <Link
@@ -42,17 +64,26 @@ export default function Nav() {
           </Link>
         ))}
       </div>
-      <div className="space-x-8">
-        {socials.map((social) => (
-          <a
-            key={social.url}
-            href={social.url}
-            target="_blank"
-            className={styling}
-          >
-            {social.title}
-          </a>
-        ))}
+      <div className="flex flex-row space-x-8">
+        <div className="space-x-8">
+          {socials.map((social) => (
+            <a
+              key={social.url}
+              href={social.url}
+              target="_blank"
+              className={styling}
+            >
+              {social.title}
+            </a>
+          ))}
+        </div>
+        <div>
+          {theme === "dark" ? (
+            <Sun className={themeButtonStyling} onClick={handleThemeSwitch} />
+          ) : (
+            <Moon className={themeButtonStyling} onClick={handleThemeSwitch} />
+          )}
+        </div>
       </div>
     </div>
   );

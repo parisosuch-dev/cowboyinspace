@@ -26,7 +26,7 @@ export default function Home() {
           subtext="My spot in cyberspace to share my interests - mostly in the realm of
             software, space, and politics."
         />
-        <div className="mt-2 sm:mt-8 border border-gray-100 rounded-md p-4">
+        <div className="mt-2 sm:mt-8 border dark:bg-gray-200 border-gray-100 rounded-md p-4">
           <h2 className="font-mono text-xl md:text-4xl font-semibold">
             Latest Blog Post
           </h2>
@@ -35,10 +35,10 @@ export default function Home() {
             href={`/blog/${post.slug}`}
             className="flex flex-col sm:flex-row w-full justify-between font-mono group mt-2 sm:mt-8"
           >
-            <p className="text-base md:text-2xl group-hover:text-black/50 dark:group-hover:text-white/50">
+            <p className="text-base md:text-2xl group-hover:text-black/50 dark:group-hover:text-black/50">
               {post.title}
             </p>
-            <div className="flex flex-row space-x-4 text-black/50 dark:text-white/50 text-sm md:text-lg">
+            <div className="flex flex-row space-x-4 text-black/50 dark:text-black/75 text-sm md:text-lg">
               <p>{post.topic}</p>
               <p>
                 {post.date
@@ -54,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-2 sm:mt-8 border border-gray-100 rounded-md p-4">
+        <div className="mt-2 sm:mt-8 border dark:bg-gray-200 border-gray-100 rounded-md p-4">
           <h2 className="font-mono text-xl md:text-4xl font-semibold">
             Other Sites
           </h2>
@@ -66,10 +66,10 @@ export default function Home() {
               className="flex flex-col w-full justify-between font-mono group"
             >
               <div className="flex flex-row w-full justify-between mt-2 sm:mt-8">
-                <p className="text-base md:text-2xl font-semibold group-hover:text-black/50 dark:group-hover:text-white/50">
+                <p className="text-base md:text-2xl font-semibold group-hover:text-black/50 dark:group-hover:text-black/50">
                   {site.title}
                 </p>
-                <p className="text-xs md:text-sm bg-black text-white rounded-full px-2 flex items-center group-hover:bg-black/80">
+                <p className="text-xs md:text-sm bg-black text-white rounded-full px-2 flex items-center group-hover:bg-black/50">
                   {site.url}
                 </p>
               </div>

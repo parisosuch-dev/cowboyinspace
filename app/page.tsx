@@ -33,7 +33,7 @@ export default function Home() {
           <Link
             key={post.title}
             href={`/blog/${post.slug}`}
-            className="flex flex-col sm:flex-row w-full justify-between font-mono group mt-2"
+            className="flex flex-col sm:flex-row w-full justify-between font-mono group mt-2 sm:mt-8"
           >
             <p className="text-base md:text-2xl group-hover:text-black/50 dark:group-hover:text-white/50">
               {post.title}
@@ -48,7 +48,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <div className="mt-2">
+          <div className="mt-2 sm:mt-8">
             <Link href="/blog" className="underline text-xs sm:text-sm">
               More posts &rarr;
             </Link>
@@ -63,7 +63,7 @@ export default function Home() {
               key={site.title}
               href={"https://" + site.url}
               target="_blank"
-              className="flex flex-col w-full justify-between font-mono group mt-2"
+              className="flex flex-col w-full justify-between font-mono group"
             >
               <div className="flex flex-row w-full justify-between mt-2 sm:mt-8">
                 <p className="text-base md:text-2xl font-semibold group-hover:text-black/50 dark:group-hover:text-white/50">

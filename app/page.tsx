@@ -7,12 +7,14 @@ export default function Home() {
 
   const sites = [
     {
-      title: "My resume",
+      title: "Professional Site",
       url: "parisosuch.com",
+      description: "My resume.",
     },
     {
-      title: "I really like pizza",
+      title: "Pizza Spots",
       url: "parisloves.pizza",
+      description: "Pizza places I have enjoyed across the states.",
     },
   ];
 
@@ -61,14 +63,17 @@ export default function Home() {
               key={site.title}
               href={"https://" + site.url}
               target="_blank"
-              className="flex flex-col sm:flex-row w-full justify-between font-mono group mt-2"
+              className="flex flex-col w-full justify-between font-mono group mt-2 sm:mt-8"
             >
-              <p className="text-base md:text-2xl group-hover:text-black/50 dark:group-hover:text-white/50">
-                {site.title}
-              </p>
-              <p className="text-black/50 dark:text-white/50 text-sm md:text-lg">
-                {site.url}
-              </p>
+              <div className="flex flex-row w-full justify-between">
+                <p className="text-base md:text-2xl group-hover:text-black/50 dark:group-hover:text-white/50">
+                  {site.title}
+                </p>
+                <p className="text-xs md:text-sm bg-black text-white rounded-full px-2 flex items-center group-hover:bg-black/80">
+                  {site.url}
+                </p>
+              </div>
+              <p>{site.description}</p>
             </Link>
           ))}
         </div>

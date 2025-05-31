@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
@@ -18,6 +19,7 @@ export default function Nav() {
   const pathName = usePathname();
 
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const routes: Route[] = [
     { path: "/", title: "Home" },
@@ -35,6 +37,10 @@ export default function Nav() {
 
   const themeButtonStyling = "hover:cursor-pointer";
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const handleThemeSwitch = () => {
     if (theme === "dark") {
       setTheme("light");
@@ -42,6 +48,8 @@ export default function Nav() {
       setTheme("dark");
     }
   };
+
+  if (!mounted) return null;
 
   return (
     <div className="p-2 sm:p-0 sm:py-4 sm:px-16 w-full flex flex-col space-y-1 sm:space-y-0 sm:flex-row justify-between text-center sm:text-left dark:text-white">

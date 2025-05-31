@@ -23,7 +23,7 @@ export default function DarkModeStars() {
 
   return (
     <div className="fixed inset-0 z-[-10] pointer-events-none">
-      <ShootingStars starWidth={50} />
+      <ShootingStars starWidth={50} minDelay={5000} maxDelay={10000} />
       <StarsBackground starDensity={0.001} />
     </div>
   );

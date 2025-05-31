@@ -63,17 +63,19 @@ export default function Home() {
               key={site.title}
               href={"https://" + site.url}
               target="_blank"
-              className="flex flex-col w-full justify-between font-mono group mt-2 sm:mt-8"
+              className="flex flex-col w-full justify-between font-mono group mt-2"
             >
-              <div className="flex flex-row w-full justify-between">
-                <p className="text-base md:text-2xl group-hover:text-black/50 dark:group-hover:text-white/50">
+              <div className="flex flex-row w-full justify-between mt-2 sm:mt-8">
+                <p className="text-base md:text-2xl font-semibold group-hover:text-black/50 dark:group-hover:text-white/50">
                   {site.title}
                 </p>
                 <p className="text-xs md:text-sm bg-black text-white rounded-full px-2 flex items-center group-hover:bg-black/80">
                   {site.url}
                 </p>
               </div>
-              <p>{site.description}</p>
+              <p className="text-xs md:text-sm mt-1 md:mt-2">
+                {site.description}
+              </p>
             </Link>
           ))}
         </div>

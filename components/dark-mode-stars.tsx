@@ -15,9 +15,9 @@ export default function DarkModeStars() {
     setMounted(true);
   }, []);
 
-  const isDark = (theme ?? resolvedTheme) === "dark";
+  if (!mounted) return null;
 
-  if (!mounted || !isDark) return null;
+  if (resolvedTheme !== "dark") return null;
 
   return (
     <div className="fixed inset-0 z-[-10] pointer-events-none">

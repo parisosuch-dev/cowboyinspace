@@ -12,7 +12,7 @@ export default function Header({
   title: string;
   subtext?: string;
 }) {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Header({
 
   if (!mounted) return null;
 
-  if (theme === "light") {
+  if (theme === "light" || resolvedTheme === "light") {
     return (
       <div className="h-[7rem] sm:h-[10rem]  rounded-md dark:bg-gray-200 bg-neutral-900 flex flex-col text-left p-4 justify-center relative font-mono">
         <h1 className="relative z-10 text-2xl md:text-5xl dark:text-neutral-900 text-white font-semibold">

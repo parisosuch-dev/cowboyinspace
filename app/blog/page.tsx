@@ -37,20 +37,20 @@ export default function Page() {
           title="Blog"
           subtext="Place to dump my thoughts and learnings."
         />
-        <div className="mt-2 sm:mt-8 space-y-8">
+        <div className="mt-2 sm:mt-8 space-y-2 sm:space-y-8 dark:bg-gray-100 dark:rounded-lg dark:px-4">
           {years.map((year) => (
-            <div key={year} className="space-y-4">
+            <div key={year} className="space-y-2 sm:space-y-4">
               <h2 className="text-base md:text-xl font-mono">{year}</h2>
               {groupedPosts[year].map((post) => (
                 <Link
                   key={post.title}
                   href={`/blog/${post.slug}`}
-                  className="flex flex-col sm:flex-row w-full justify-between font-mono border-b group"
+                  className="flex flex-col-reverse sm:flex-row w-full justify-between font-mono border-b group"
                 >
                   <p className="text-base md:text-2xl group-hover:text-black/50">
                     {post.title}
                   </p>
-                  <div className="flex flex-row space-x-4 text-black/50 text-sm md:text-lg">
+                  <div className="flex flex-row space-x-4 text-black/50 text-xs md:text-lg">
                     <p>{post.topic}</p>
                     <p>
                       {post.date

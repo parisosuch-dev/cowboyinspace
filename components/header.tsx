@@ -23,7 +23,7 @@ export default function Header({
 
   if (theme === "light" || resolvedTheme === "light") {
     return (
-      <div className="h-[7rem] sm:h-[10rem]  rounded-md dark:bg-gray-100 bg-neutral-900 flex flex-col text-left p-4 justify-center relative font-mono">
+      <div className="h-[7rem] sm:h-[10rem] rounded-md dark:bg-gray-100 bg-neutral-900 flex flex-col text-left p-4 justify-center relative font-mono">
         <h1 className="relative z-10 text-2xl md:text-5xl dark:text-neutral-900 text-white font-semibold">
           {title}
         </h1>

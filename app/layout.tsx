@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "cowboyin.space",
-  description: "Paris' personal website.",
+  description: "Paris Osuch's personal website.",
 };
 
 export default function RootLayout({

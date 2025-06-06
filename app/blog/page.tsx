@@ -37,7 +37,7 @@ export default function Page() {
           title="Blog"
           subtext="Place to dump my thoughts and learnings."
         />
-        <div className="mt-2 sm:mt-8 space-y-2 sm:space-y-8 dark:bg-gray-100 dark:rounded-lg dark:px-4">
+        <div className="mt-2 sm:mt-8 space-y-2 sm:space-y-8 dark:bg-gray-100 dark:rounded-lg dark:p-4">
           {years.map((year) => (
             <div key={year} className="space-y-2 sm:space-y-4">
               <h2 className="text-base md:text-xl font-mono">{year}</h2>

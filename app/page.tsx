@@ -26,7 +26,7 @@ export default function Home() {
           subtext="My spot in cyberspace to share my interests - mostly in the realm of
             software, space, and politics."
         />
-        <div className="mt-2 sm:mt-8 border dark:bg-gray-200 border-gray-100 rounded-md p-4">
+        <div className="mt-2 sm:mt-8 border bg-white dark:bg-gray-100 border-gray-100 rounded-md p-4">
           <h2 className="font-mono text-xl md:text-4xl font-semibold">
             Latest Blog Post
           </h2>
@@ -54,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-2 sm:mt-8 border dark:bg-gray-200 border-gray-100 rounded-md p-4">
+        <div className="mt-2 sm:mt-8 border bg-white dark:bg-gray-100 border-gray-100 rounded-md p-4">
           <h2 className="font-mono text-xl md:text-4xl font-semibold">
             Other Sites
           </h2>

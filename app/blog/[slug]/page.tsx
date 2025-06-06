@@ -36,16 +36,19 @@ const postPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
     <div className="w-full flex flex-col items-center">
       <div className="space-y-2 sm:space-y-4 w-5/6 sm:w-3/6 2xl:w-1/3 font-mono">
         <Link
-          className="text-xs sm:text-sm hover:underline hover:cursor-pointer"
+          className="text-xs sm:text-sm hover:underline hover:cursor-pointer dark:text-white"
           href="/blog"
         >
           {"←"} back
         </Link>
-        <div className="flex flex-row space-x-4 sm:space-x-8">
+        <div className="flex flex-row space-x-4 sm:space-x-8 dark:text-white text-xs sm:text-base">
           <p>{post.data.topic.toUpperCase()}</p>
           <p>{post.data.date}</p>
         </div>
-        <article className="prose dark:prose-invert text-xs sm:text-base">
+        <h1 className="dark:text-white font-bold text-xl sm:text-3xl">
+          {post.data.title}
+        </h1>
+        <article className="prose dark:text-white text-xs sm:text-base">
           <Markdown>{post.content}</Markdown>
         </article>
       </div>
